@@ -53,7 +53,7 @@ def walking():
 
 @app.route('/', methods = ['GET'])
 def home():
-   return "Hello Worldsssssasdsg"
+   return "Home Page"
 # driver function
 if __name__ == '__main__':
 
