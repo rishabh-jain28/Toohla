@@ -34,7 +34,7 @@ def car():
     tree=html.fromstring(browser.page_source)
     car_time=tree.xpath('//span[@jstcache="198"]/text()')
     car_distance=tree.xpath('//div[@jstcache="202"]/text()')
-    carbon_emmision = (df.loc[df['Entity'] == 'Light rail and tram']['GHG emissions (gCO2e/km)'])*1.60934*float(car_distance[0].split(' miles')[0])
+    carbon_emmision = (df.loc[df['Entity'] == 'Taxi']['GHG emissions (gCO2e/km)'])*1.60934*float(car_distance[0].split(' miles')[0])
     browser.close()
     return {"c_distance":car_distance[0],"c_time":car_time[0],"carbon_emmision":"{}".format(carbon_emmision)}
 
